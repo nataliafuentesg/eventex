@@ -219,6 +219,11 @@ img {
     background-size: cover;
 }
 
+#counter h1{
+    font-weight: bold;
+    font-size: 70px;
+}
+
 /* PORTFOLIO */
 .portfolio-item .iconbox {
     background-color: var(--c-brand);
