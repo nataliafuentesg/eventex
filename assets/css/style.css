@@ -53,6 +53,11 @@ img {
 .logoFooter{
     height: 40px;
 }
+.textLogo{
+    color: var(--c-brand);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 
 .section-padding {
     padding-top: 140px;
@@ -132,6 +137,7 @@ img {
 }
 
 
+
 /* SECTION TITLE */
 .section-title {
     margin-bottom: 60px;
@@ -174,6 +180,7 @@ img {
     position: relative;
     overflow: hidden;
     z-index: 2;
+    height: 350px;
 }
 
 .service::after {
@@ -247,6 +254,10 @@ img {
     bottom: -14px;
     background-color: white;
     transform: rotate(45deg);
+}
+
+.rounded-circle{
+    height: 6rem;
 }
 
 /* TEAM */
