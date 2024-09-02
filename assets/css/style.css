@@ -1,14 +1,14 @@
 /* FONTS */
-@import url(../css/clash-display.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* VARIABLES */
 :root {
-    --c-dark: #212529;
-    --c-brand: #4e57d4;
-    --c-brand-light: #6970dd;
-    --c-brand-rgb: 78, 87, 212;
+    --c-dark: #000000;
+    --c-brand: #ff8a12;
+    --c-brand-light: #f9f15f;
+    --c-brand-rgb: 255,138,18;
     --c-body: #727272;
-    --font-base: "ClashDisplay", sans-serif;
+    --font-base: "Open Sans", sans-serif;
     --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
     --transition: all 0.5s ease;
 }
@@ -26,6 +26,11 @@ h1, h2, h3,h4, h5, h6,
     color: var(--c-dark);
 }
 
+.titleBrand{
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
 a {
     text-decoration: none;
     color: var(--c-brand);
@@ -33,12 +38,20 @@ a {
 }
 
 a:hover {
-    color: var(--c-brand-light);
+    color:var(--c-brand-light);
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+.logo{
+    height: 55px;
+}
+
+.logoFooter{
+    height: 40px;
 }
 
 .section-padding {
@@ -84,6 +97,10 @@ img {
     color: var(--c-brand);
 }
 
+.navbar-nav .nav-link:hover {
+    color: var(--c-brand);
+    text-decoration: underline;
+}
 
 /* BTN */
 .btn {
@@ -97,19 +114,19 @@ img {
 .btn-brand {
     background-color: var(--c-brand);
     border-color: var(--c-brand);
-    color: white;
+    color: black;
 }
 
 .btn-brand:hover {
     background-color: var(--c-brand-light);
     border-color: var(--c-brand-light);
-    color: white;
+    color: black;
 }
 
 
 /* HERO */
 #hero {
-    background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url(../images/hero-1.jpg);
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8)),url(../images/hero-1.jpg);    
     background-position: center;
     background-size: cover;
 }
@@ -131,6 +148,11 @@ img {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.contactoTitulo{
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 
 
@@ -175,7 +197,7 @@ img {
 
 .service:hover h5,
 .service:hover p {
-    color: white;
+    color: rgb(0, 0, 0);   
 }
 
 .service:hover .iconbox {
@@ -321,5 +343,10 @@ footer .line {
 .social-icons a:hover {
     background-color: var(--c-brand);
     color: white;
+}
+
+.brandName{
+    color: white;
+    font-size: 25px;
 }
 
