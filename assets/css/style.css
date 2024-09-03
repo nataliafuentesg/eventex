@@ -387,6 +387,7 @@ footer .line {
     color: #7d4002;
     text-decoration: none;  
     border-radius: 50%;
+    background-color: white;    
     box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;      
 }
 
