@@ -347,13 +347,22 @@ footer .line {
 }
 
 .social-icons a {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(255,255,255,0.1);
     border-radius: 100px;
+}
+
+.social-icons a i {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-icons a:hover {
@@ -365,4 +374,43 @@ footer .line {
     color: white;
     font-size: 25px;
 }
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 2.5rem;
+}
+
+.linkChat i {
+    color: #7d4002;
+    text-decoration: none;  
+    border-radius: 50%;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;      
+}
+
+.linkChat i:hover {
+    color: #f9f15f;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;  
+}
+
+.whatsapp-message {
+    position: fixed;
+    bottom: calc(20px + 70px);
+    right: 20px;
+    background-color: var(--c-brand-light);
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: none;
+    z-index: 999;
+  }
+  
+  .whatsapp-message.show {
+    display: block;
+  }
 

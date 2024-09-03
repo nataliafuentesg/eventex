@@ -10,3 +10,19 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+const whatsappMessage = document.createElement('div');
+whatsappMessage.classList.add('whatsapp-message');
+whatsappMessage.innerText = '¿Cómo podemos ayudarte?';
+
+document.body.appendChild(whatsappMessage);
+
+window.addEventListener('load', () => {
+  whatsappMessage.classList.add('show');
+});
+
+document.addEventListener('click', (event) => {
+  if (!whatsappMessage.contains(event.target)) {
+    whatsappMessage.classList.remove('show');
+  }
+});
