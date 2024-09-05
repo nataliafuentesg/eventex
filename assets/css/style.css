@@ -105,13 +105,14 @@ img {
 .navbar {
     box-shadow: var(--box-shadow);
     background-color: var(--c-light);
-    align-items: center;
-
+    
 }
 
 .navbar-nav .nav-link {
     font-weight: 500;
     color: var(--c-dark);
+    align-items: center;
+
 }
 
 .navbar-nav .nav-link.active {
