@@ -26,3 +26,19 @@ document.addEventListener('click', (event) => {
     whatsappMessage.classList.remove('show');
   }
 });
+// Selecciona el checkbox
+const toggleSwitch = document.querySelector('.checkbox');
+
+// Agrega el evento 'change' para escuchar cuando se activa/desactiva
+toggleSwitch.addEventListener('change', function() {
+  if (toggleSwitch.checked) {
+    // Acción cuando el toggle está activado
+    console.log('El interruptor está activado');
+    // Puedes agregar aquí cualquier acción, como cambiar el tema
+    document.body.classList.add('dark-theme');  // Ejemplo de cambio de tema
+  } else {
+    // Acción cuando el toggle está desactivado
+    console.log('El interruptor está desactivado');
+    document.body.classList.remove('dark-theme');  // Vuelve al tema normal
+  }
+});

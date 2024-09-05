@@ -8,9 +8,21 @@
     --c-brand-light: #f9f15f;
     --c-brand-rgb: 255,138,18;
     --c-body: #727272;
+    --c-light: #ffffff;
     --font-base: "Open Sans", sans-serif;
     --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
     --transition: all 0.5s ease;
+}
+
+.dark-theme {
+    --c-dark: #ffffff; /* Cambia a colores claros */
+    --c-body: #dcd6d6; /* Color de texto en modo oscuro */
+    --c-brand: #ff8a12; /* Puedes ajustarlo si prefieres otro tono para modo oscuro */
+    --c-brand-light: #f9f15f;
+    --c-light: #2d2c2c;
+
+    --box-shadow: 0px 15px 25px rgba(255, 255, 255, 0.1); /* Ajusta sombras más claras */
+    --c-brand-rgb: 255, 138, 18;
 }
 
 /* RESET & HELPERS */
@@ -18,6 +30,7 @@ body {
     font-family: var(--font-base);
     line-height: 1.7;
     color: var(--c-body);
+    background-color: var(--c-light);
 }
 
 h1, h2, h3,h4, h5, h6,
@@ -91,6 +104,9 @@ img {
 /* NAVBAR */
 .navbar {
     box-shadow: var(--box-shadow);
+    background-color: var(--c-light);
+    align-items: center;
+
 }
 
 .navbar-nav .nav-link {
@@ -106,6 +122,73 @@ img {
     color: var(--c-brand);
     text-decoration: underline;
 }
+
+/* Dark mode */
+
+/* From Uiverse.io by Madflows */
+.toggle-switch {
+  position: relative;
+  width: 60px; /* Reducido de 100px */
+  height: 30px; /* Reducido de 50px */
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+  margin-left: 1rem;
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 30px; /* Reducido de 50px */
+  background-color: var(--dark);
+  border-radius: 15px; /* Ajustado según la nueva altura */
+  cursor: pointer;
+  border: 2px solid var(--dark); /* Reducido de 3px */
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px; /* Ajustado según la nueva altura */
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 5px; /* Ajustado según la nueva altura */
+  left: 5px; /* Ajustado según la nueva altura */
+  width: 20px; /* Reducido de 25px */
+  height: 20px; /* Reducido de 25px */
+  border-radius: 50%;
+  -webkit-box-shadow: inset 8px -3px 0px 0px var(--light); /* Ajustado */
+  box-shadow: inset 8px -3px 0px 0px var(--light); /* Ajustado */
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(30px); /* Ajustado según el nuevo tamaño */
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+  
 
 /* BTN */
 .btn {
@@ -257,7 +340,7 @@ img {
     height: 28px;
     position: absolute;
     bottom: -14px;
-    background-color: white;
+    background-color:var(--c-light);
     transform: rotate(45deg);
 }
 
@@ -284,12 +367,12 @@ img {
 }
 
 /* CONTACT */
-#contact {
+#contacto {
     position: relative;
     z-index: 2;
 }
 
-#contact::after {
+#contacto::after {
     content: "";
     width: 100%;
     height: 70%;
@@ -302,11 +385,11 @@ img {
     z-index: -1;
 }
 
-#contact .form-control {
+#contacto .form-control {
     border-radius: 0;
 }
 
-#contact .form-control:focus {
+#contacto .form-control:focus {
     box-shadow: none;
     border-color: var(--c-brand);
 }
