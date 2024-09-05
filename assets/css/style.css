@@ -129,6 +129,10 @@ img {
 
 }
 
+.navbar-toggler{
+    background-color: var(--c-brand);
+}
+
 /* Dark mode */
 
 /* From Uiverse.io by Madflows */
