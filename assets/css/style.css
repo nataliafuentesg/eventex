@@ -124,6 +124,11 @@ img {
     text-decoration: underline;
 }
 
+.navbar-nav{
+    align-items: center;
+
+}
+
 /* Dark mode */
 
 /* From Uiverse.io by Madflows */
