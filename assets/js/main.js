@@ -42,3 +42,14 @@ toggleSwitch.addEventListener('change', function() {
     document.body.classList.remove('dark-theme');  // Vuelve al tema normal
   }
 });
+
+const navLinks = document.querySelectorAll('.nav-item')
+const menuToggle = document.getElementById('navbarNav')
+const bsCollapse = bootstrap.Collapse.getOrCreateInstance(menuToggle, {toggle: false})
+navLinks.forEach((l) => {
+    if (menuToggle.classList.contains('show')) {  // only fire on mobile
+        l.addEventListener('click', () => { 
+            bsCollapse.toggle() 
+        })
+    }
+})

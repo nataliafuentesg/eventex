@@ -174,7 +174,7 @@ img {
 .slider::before {
   content: "";
   position: absolute;
-  top: 5px; /* Ajustado según la nueva altura */
+  top: 2.5px; /* Ajustado según la nueva altura */
   left: 5px; /* Ajustado según la nueva altura */
   width: 20px; /* Reducido de 25px */
   height: 20px; /* Reducido de 25px */
