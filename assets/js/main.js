@@ -26,30 +26,34 @@ document.addEventListener('click', (event) => {
     whatsappMessage.classList.remove('show');
   }
 });
-// Selecciona el checkbox
-const toggleSwitch = document.querySelector('.checkbox');
 
-// Agrega el evento 'change' para escuchar cuando se activa/desactiva
+
+// Selecciona el interruptor
+const toggleSwitch = document.querySelector('.toggle-switch .checkbox');
+
+// Función para actualizar el tema
+function updateTheme() {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    toggleSwitch.checked = true;
+  } else {
+    document.body.classList.remove('dark-theme');
+    toggleSwitch.checked = false;
+  }
+}
+
+// Evento para el cambio de estado del interruptor
 toggleSwitch.addEventListener('change', function() {
   if (toggleSwitch.checked) {
-    // Acción cuando el toggle está activado
-    console.log('El interruptor está activado');
-    // Puedes agregar aquí cualquier acción, como cambiar el tema
-    document.body.classList.add('dark-theme');  // Ejemplo de cambio de tema
+    document.body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
   } else {
-    // Acción cuando el toggle está desactivado
-    console.log('El interruptor está desactivado');
-    document.body.classList.remove('dark-theme');  // Vuelve al tema normal
+    document.body.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light');
   }
 });
 
-const navLinks = document.querySelectorAll('.nav-item')
-const menuToggle = document.getElementById('navbarNav')
-const bsCollapse = bootstrap.Collapse.getOrCreateInstance(menuToggle, {toggle: false})
-navLinks.forEach((l) => {
-    if (menuToggle.classList.contains('show')) {  // only fire on mobile
-        l.addEventListener('click', () => { 
-            bsCollapse.toggle() 
-        })
-    }
-})
+
+
+
+

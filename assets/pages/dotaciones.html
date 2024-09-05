@@ -12,10 +12,13 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
-    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="../images/logo-white.png" class="logo" alt="logo eventex">
+                <!-- Logo para modo claro -->
+                <img src="../images/logo-black.svg" class="logo logo-light" alt="logo eventex">
+                <!-- Logo para modo oscuro -->
+                <img src="../images/logo-blanco.svg" class="logo logo-dark" alt="logo eventex">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                    <li class="nav-item" >
                         <a class="nav-link" href="../../index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
@@ -33,11 +36,24 @@
                         <a class="nav-link" href="../pages/eventos.html">Eventos</a>
                     </li>
                     
-                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <div class="toggle-switch">
+                            <label class="switch-label" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                                <input type="checkbox" class="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </li>
                 </ul>
-                <a href="#contacto" class="btn btn-brand ms-lg-3">Contacto</a>
             </div>
+            
         </div>
+
+        
     </nav>
 
     <section class="section-padding">
