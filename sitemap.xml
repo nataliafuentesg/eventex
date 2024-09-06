@@ -19,7 +19,7 @@
 
   <!-- Página de eventos -->
   <url>
-    <loc>https://www.eventex.com/assets/pages/eventos.html</loc>
+    <loc>https://www.eventexsas.com/assets/pages/eventos.html</loc>
     <lastmod>2024-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -27,7 +27,7 @@
 
   <!-- Página de contacto -->
   <url>
-    <loc>https://www.eventex.com/assets/pages/contacto.html</loc>
+    <loc>https://www.eventexsas.com/assets/pages/contacto.html</loc>
     <lastmod>2024-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
