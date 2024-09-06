@@ -400,6 +400,27 @@ img {
     bottom: 24px;
 }
 
+/* SERVICE */
+.teamMember {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    height: 600px;
+}
+
+
+
+.cargo{
+    color: var(--c-brand);
+}
+
+.teamCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
 /* CONTACT */
 #contacto {
     position: relative;
