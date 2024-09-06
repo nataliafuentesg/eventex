@@ -40,8 +40,8 @@ h1, h2, h3,h4, h5, h6,
 }
 
 .titleBrand{
-    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    text-shadow: 2px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -2px #ffffff,
+             1px 1px #ff8a12, -1px -1px #ff8a12, 1px -1px #ff8a12, -1px 1px #ff8a12;
 }
 
 a {
@@ -297,7 +297,7 @@ img {
     position: relative;
     overflow: hidden;
     z-index: 2;
-    height: 350px;
+    height: 250px;
 }
 
 .service::after {
@@ -320,8 +320,13 @@ img {
 }
 
 .service:hover h5,
-.service:hover p {
+.service:hover p{
     color: rgb(255, 255, 255);   
+}
+
+.service:hover a {
+    color: white;
+    text-decoration: underline;
 }
 
 .service:hover .iconbox {
@@ -380,6 +385,8 @@ img {
 
 .rounded-circle{
     height: 6rem;
+    width: 6rem;
+    object-fit:contain;
 }
 
 /* TEAM */
@@ -401,6 +408,7 @@ img {
 }
 
 /* SERVICE */
+
 .teamMember {
     position: relative;
     overflow: hidden;
@@ -660,3 +668,9 @@ footer .line {
           border-bottom: 1px solid #000; }
   
 
+.textoTeam{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+}
