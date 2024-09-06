@@ -593,7 +593,7 @@ footer .line {
   
   .owl-1 .owl-dots {
     position: absolute;
-    bottom: 40px;
+    
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -609,7 +609,7 @@ footer .line {
         background: rgba(255, 255, 255, 0.5);
         margin: 4px; }
       .owl-1 .owl-dots .owl-dot.active > span {
-        background: white; }
+        background: var(--c-brand); }
       .owl-1 .owl-dots .owl-dot:active, .owl-1 .owl-dots .owl-dot:focus {
         outline: none; }
   

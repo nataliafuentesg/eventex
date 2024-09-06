@@ -74,7 +74,7 @@ $(function() {
         loop:false,
         margin:0,
         nav:false,
-        dots: false,
+        dots: true,
         items: 1,
         smartSpeed: 1000,
         autoplay: false,
