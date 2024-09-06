@@ -484,6 +484,11 @@ footer .line {
     margin-bottom: 24px;
 }
 
+.link-portafolio{
+    color: var(--c-brand);
+    margin-bottom: 2rem;
+}
+
 .social-icons a {
     width: 50px;
     height: 50px;
@@ -506,6 +511,10 @@ footer .line {
 .social-icons a:hover {
     background-color: var(--c-brand);
     color: white;
+}
+
+.social-icons{
+    padding-top: 1rem;
 }
 
 .brandName{
