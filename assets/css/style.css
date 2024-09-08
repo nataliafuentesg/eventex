@@ -674,3 +674,25 @@ footer .line {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.nameProduct{
+    color: var(--c-brand);
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.catalogoCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.productCatalogo{
+    height: 250px;
+    width: 250px;
+}
+
+.imgCatalogo{
+    height: 200px;
+}
