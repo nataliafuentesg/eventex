@@ -624,10 +624,14 @@ footer .line {
   .media-29101 .img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
-    flex: 0 0 50%; }
+    flex: 0 0 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   
   .media-29101 .text {
-    padding: 50px; }
+    padding: 20px; }
     @media (max-width: 991.98px) {
       .media-29101 .text {
         padding: 20px;
