@@ -224,9 +224,24 @@ img {
 
 /* HERO */
 #hero {
-    background: url(../images/banner-eventex.png);    
     background-position: center;
     background-size: cover;
+    animation: changeImage 7s infinite; /* Cambiará cada 15 segundos */
+}
+
+@keyframes changeImage {
+    0% {
+        background-image: url('../images/banner-eventex-2.png');
+    }
+    50% {
+        background-image: url('../images/banner-eventex.png');
+    }
+    66% {
+        background-image: url('../images/banner-eventex-3.png');
+    }
+    100% {
+        background-image: url('../images/banner-eventex-2.png');
+    }
 }
 
 /*logo inicio */
