@@ -463,13 +463,15 @@ img {
     position: relative;
     overflow: hidden;
     z-index: 2;
-    height: 600px;
+    height: 610px;
 }
 
 
 
 .cargo {
     color: var(--c-brand);
+    font-weight: bold;
+    font-size: 17px !important;
 }
 
 .teamCard {
@@ -743,13 +745,24 @@ footer .line {
     width: 100%;
     border-bottom: 1px var(--c-brand);
     margin-bottom: 40px;
+    white-space: nowrap; /* Evitar que las opciones se vayan a una nueva línea */
+    overflow-x: auto; /* Hacer que el contenido sea desplazable en pantallas pequeñas */
+    display: flex; /* Mantener los elementos en línea */
+    justify-content: space-between;
 }
 
 .carousel-nav a {
     color: var(--c-dark);
-    padding: 20px;
     text-align: center;
     display: inline-block;
+    flex: 1; 
+    margin-right: 10px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.carousel-nav a:last-child {
+    margin-right: 0; 
 }
 
 .carousel-nav a:hover {
@@ -768,12 +781,33 @@ footer .line {
     position: absolute;
 }
 
+.textoTeam p {
+    border-bottom: 1px solid var(--c-brand); 
+    padding-bottom: 10px; 
+    margin-bottom: 10px; 
+    width: 90%; 
+    margin: 0 auto 10px auto;
+    font-size: 13px;
+}
+.ubicacion {
+    display: block; 
+    margin-top: 5px; 
+    font-style: italic; 
+}
+
+.textoTeam p:last-child {
+    border-bottom: none; 
+}
 
 .textoTeam {
     display: flex;
     flex-direction: column;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.textoTeam h5{
+    font-weight: bold;
 }
 
 .nameProduct {
