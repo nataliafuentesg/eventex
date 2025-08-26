@@ -1214,9 +1214,6 @@ footer .line {
     .logo-track{ animation: none; }
   }
   
-  .section-padding{
-    padding: 5rem !important;
-  }
 
   /* Ajustes de utilidades claras cuando hay dark-theme */
 .dark-theme .bg-light,
