@@ -271,7 +271,6 @@ img {
     margin-right: auto;
 }
 
-/* (Eliminado .titleBrand / .contactoTitulo — ya no usamos texto con bordes) */
 
 
 /* ==========================================================================
@@ -608,19 +607,7 @@ img {
 }
 
 /* overlay ajustado si usas un fondo en dark (se mantiene por compatibilidad) */
-.dark-theme #contacto::after {
-    content: "";
-    width: 100%;
-    height: 70%;
-    background: linear-gradient(rgba(var(--c-brand-rgb), 0.25), rgba(var(--c-brand-rgb), 0.25)), url(../images/counter.jpg);
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    filter: brightness(0.7) contrast(1.05);
-}
+
 
 .contact-card {
     background: var(--c-light);
@@ -1066,23 +1053,47 @@ footer .line {
   .dark-theme .logo-item{ background:#1e1e1e; border-color: rgba(255,255,255,.08); box-shadow: 0 6px 16px rgba(255,255,255,.04); }
   
 /* ===== Timeline (proceso) ===== */
-.timeline {
-    position: relative; margin: 0; padding-left: 26px; list-style: none;
+/* ===== Process (Cómo trabajamos) – compacto, sin línea vertical ===== */
+.process{
+    list-style: none; margin: 0; padding: 0;
+    display: grid; gap: 12px;
   }
-  .timeline::before{
-    content:""; position:absolute; left:10px; top:4px; bottom:4px;
-    width:2px; background: rgba(0,0,0,.08);
+  .process-item{
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    background: var(--c-light);
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-shadow: 0 8px 18px rgba(0,0,0,.04);
   }
-  .dark-theme .timeline::before{ background: rgba(255,255,255,.12); }
+  .process-badge{
+    width: 44px; height: 44px; border-radius: 12px;
+    display: grid; place-items: center; flex: none;
+    background: rgba(var(--c-brand-rgb), .14);
+    color: var(--c-brand); font-size: 22px;
+  }
+  .process-item h6{ color: var(--c-dark); font-weight: 700; }
+  .process-item p{ color: var(--c-body); }
   
-  .timeline-item{ position:relative; margin-bottom:16px; }
-  .timeline-item:last-child{ margin-bottom:0; }
-  .timeline-item .dot{
-    position:absolute; left:-2px; top:4px; width:14px; height:14px; border-radius:50%;
-    background: var(--c-brand); box-shadow: 0 0 0 3px rgba(var(--c-brand-rgb), .25);
+  /* Dark mode */
+  .dark-theme .process-item{
+    background: #1e1e1e; border-color: rgba(255,255,255,.08);
+    box-shadow: 0 8px 18px rgba(255,255,255,.04);
   }
-  .timeline-item h6{ color: var(--c-dark); font-weight:700; }
-  .timeline-item p{ color: var(--c-body); margin-bottom:0; }
+  .dark-theme .process-badge{
+    background: rgba(var(--c-brand-rgb), .18);
+    color: var(--c-brand);
+  }
+  
+  /* Ajuste responsive */
+  @media (max-width: 576px){
+    .process-item{ grid-template-columns: 40px 1fr; padding: 10px 12px; }
+    .process-badge{ width: 40px; height: 40px; font-size: 20px; }
+  }
+  
   
   /* ===== Diferenciales ===== */
   .value-list{ display: grid; gap: 12px; }
@@ -1115,6 +1126,43 @@ footer .line {
   }
 
   /* ===== Logo Ticker (carrusel CSS-only) ===== */
+  /* ===== Logo Ticker – tamaños más grandes ===== */
+:root{
+    --logo-max-h: 84px;   /* altura máxima del logo (sube a 96/110 si quieres) */
+    --logo-max-w: 180px;  /* ancho máximo del logo */
+    --logo-gap:   22px;   /* espacio entre cards */
+    --logo-pad:   18px;   /* padding interno del contenedor del logo */
+  }
+  
+  /* pista y separación */
+  .logo-track{ gap: var(--logo-gap) !important; }
+  
+  /* card del logo */
+  .logo-item{
+    padding: var(--logo-pad) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 22px rgba(0,0,0,.06) !important;
+  }
+  
+  /* imagen del logo (más grande y nítido) */
+  .logo-item img{
+    max-height: var(--logo-max-h) !important;
+    max-width:  var(--logo-max-w) !important;
+    object-fit: contain !important;
+    image-rendering: -webkit-optimize-contrast;
+    filter: grayscale(1) contrast(1.05) opacity(.95);
+  }
+  
+  /* en pantallas pequeñas, baja un poquito para no romper */
+  @media (max-width: 576px){
+    :root{
+      --logo-max-h: 72px;
+      --logo-max-w: 160px;
+      --logo-gap:   16px;
+      --logo-pad:   14px;
+    }
+  }
+  
 .logo-ticker{
     position: relative;
     overflow: hidden;
@@ -1166,4 +1214,22 @@ footer .line {
     .logo-track{ animation: none; }
   }
   
-  
+  .section-padding{
+    padding: 5rem !important;
+  }
+
+  /* Ajustes de utilidades claras cuando hay dark-theme */
+.dark-theme .bg-light,
+.dark-theme .bg-white { 
+  background-color: var(--c-light) !important; /* tu gris oscuro */
+}
+.dark-theme .bg-light h1, .dark-theme .bg-light h2,
+.dark-theme .bg-light h3, .dark-theme .bg-light h4,
+.dark-theme .bg-light h5, .dark-theme .bg-light h6,
+.dark-theme .bg-light p,  .dark-theme .bg-light a,
+.dark-theme .bg-white h1, .dark-theme .bg-white h2,
+.dark-theme .bg-white h3, .dark-theme .bg-white h4,
+.dark-theme .bg-white h5, .dark-theme .bg-white h6,
+.dark-theme .bg-white p,  .dark-theme .bg-white a {
+  color: var(--c-dark) !important; /* en dark-theme, var(--c-dark) = blanco */
+}
