@@ -1262,4 +1262,36 @@ footer .line {
     color: #000 !important;
     box-shadow: none !important;
   }
-  
+
+  /* --- Guardrails generales (móvil) --- */
+html, body { overflow-x: hidden; }
+
+/* Evita que el bloque pueda desbordar en X */
+#por-que { overflow-x: clip; }            /* usa hidden si tu navegador no soporta clip */
+@supports not (overflow-x: clip) {
+  #por-que { overflow-x: hidden; }
+}
+
+/* Asegura que la grid nunca se pase del ancho */
+.process, .value-list { max-width: 100%; }
+.process-item { width: 100%; }
+
+/* La columna del icono se vuelve flexible y más chica en móvil */
+@media (max-width: 576px){
+  .process-item{
+    grid-template-columns: minmax(32px, 40px) 1fr !important;
+    padding: 10px 12px !important;
+    margin: 0 !important;
+  }
+  .process-badge{
+    width: 40px; height: 40px; font-size: 20px;
+  }
+  /* Evita cortes con palabras largas */
+  .process-item h6, .process-item p { word-break: break-word; overflow-wrap: anywhere; }
+}
+
+/* Si el row de Bootstrap generara scroll por gutters negativos, este hack lo neutraliza */
+#por-que .row { margin-left: 0 !important; margin-right: 0 !important; }
+#por-que .col-lg-6, 
+#por-que .col-12 { padding-left: 0 !important; padding-right: 0 !important; }
+
