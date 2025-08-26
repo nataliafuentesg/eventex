@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <link rel="shortcut icon" href="./assets/images/x.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Eventex - Dotaciones y Organización de Eventos en Bogotá | Calidad y Profesionalismo</title>
@@ -132,39 +132,48 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-6" data-aos="fade-down" data-aos-delay="30">
-                    <img src="./assets/images/eventex-nosotros.png" alt="eventex nosotros">
-                </div>
-                <div data-aos="fade-down" data-aos-delay="50" class="col-lg-5">
-                    <h1>Acerca de Eventex</h1>
-                    <p class="mt-3 mb-4">Somos Colombianos, fabricamos, distribuimos y comercializamos dotación textil
-                        privada y pública. Desarrollamos eventos de alto nivel, siendo la opción más confiable para
-                        ferias culturales, empresariales y eventos de protocolo.</p>
-                    <div class="d-flex pt-4 mb-3">
-                        <div class="iconbox me-4">
-                            <i class="ri-global-line"></i>
-                        </div>
-                        <div>
-                            <h5>Experiencia Internacional</h5>
-                            <p>Contamos con una vasta experiencia acreditada internacionalmente en el área de Coaching,
-                                lobby internacional, y representación de marca.</p>
-                        </div>
+
+            <div class="row feature-row align-items-center justify-content-between">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+                    <div class="about-media">
+                        <img class="w-100 object-fit-cover" src="./assets/images/eventex-nosotros.png"
+                            alt="Eventex - Nosotros">
+                        <span class="about-badge"><i class="ri-shield-check-line me-1"></i> Experiencia
+                            comprobada</span>
                     </div>
-                    <div class="d-flex mb-3">
-                        <div class="iconbox me-4">
-                            <i class="ri-macbook-fill"></i>
-                        </div>
-                        <div>
-                            <h5>Tecnologías Emergentes</h5>
-                            <p>Desarrollamos tecnologías emergentes, posicionándonos a la vanguardia en soluciones
-                                innovadoras.</p>
-                        </div>
+                </div>
+
+                <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="mb-3">Acerca de Eventex</h2>
+                    <p class="mb-4">
+                        Somos colombianos. Fabricamos, distribuimos y comercializamos dotación textil para sector
+                        privado y público.
+                        Desarrollamos eventos de alto nivel: ferias culturales, corporativas y de protocolo, con
+                        operación integral.
+                    </p>
+
+                    <ul class="feature-list">
+                        <li><i class="ri-check-line"></i><span>Coordinación end-to-end: planeación, logística y control
+                                de calidad.</span></li>
+                        <li><i class="ri-check-line"></i><span>Fabricación directa y personalización según
+                                especificaciones técnicas.</span></li>
+                        <li><i class="ri-check-line"></i><span>Capacidad multi-ciudad con cumplimiento de tiempos y
+                                presupuestos.</span></li>
+                    </ul>
+
+                    <hr class="feature-divider my-4">
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-brand" href="mailto:info@eventex.com.co?subject=Consulta%20Eventex">
+                            <i class="ri-mail-line me-1"></i> Escribir a Eventex
+                        </a>
+                        <a class="btn btn-outline-dark" href="./assets/pages/eventos.html">Ver portafolio de eventos</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- SERVICES -->
     <section id="services" class="section-padding border-top">
@@ -177,239 +186,171 @@
                     </div>
                 </div>
             </div>
-            <div class="row g-4 text-center d-flex justify-content-center">
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="50">
-                    <div class="service theme-shadow p-lg-5 p-4">
-                        <div class="iconbox">
-                            <i class="ri-shirt-fill"></i>
-                        </div>
-                        <h5 class="mt-4 mb-3">Dotaciones</h5>
-                        <a href="./assets/pages/dotaciones.html">Más Información</a>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Card: Dotaciones -->
+                <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="80">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="ri-shirt-fill"></i></div>
+                        <h5 class="mb-2">Dotaciones</h5>
+                        <p class="mb-3">Fabricación directa, especificaciones técnicas y control de calidad. Uniformes,
+                            EPP y más.</p>
+                        <a class="btn btn-brand" href="./assets/pages/dotaciones.html">Más información</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="100">
-                    <div class="service theme-shadow p-lg-5 p-4">
-                        <div class="iconbox">
-                            <i class="ri-government-fill"></i>
-                        </div>
-                        <h5 class="mt-4 mb-3">Logística y Eventos</h5>
-                        <a href="./assets/pages/eventos.html">Más Información</a>
+
+                <!-- Card: Eventos -->
+                <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="140">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="ri-government-fill"></i></div>
+                        <h5 class="mb-2">Logística y Eventos</h5>
+                        <p class="mb-3">Planeación y operación integral. Activaciones BTL, lanzamientos y eventos de
+                            protocolo.</p>
+                        <a class="btn btn-outline-dark" href="./assets/pages/eventos.html">Más información</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COUNTER -->
-    <section id="counter" class="section-padding">
-        <div class="container text-center">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="50">
-                    <h1 class="text-white display-4">+5</h1>
-                    <h6 class="text-uppercase mb-0 text-white mt-3">Años de Experiencia</h6>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="100">
-                    <h1 class="text-white display-4">+300</h1>
-                    <h6 class="text-uppercase mb-0 text-white mt-3">Eventos, activaciones y Lanzamientos</h6>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="150">
-                    <h1 class="text-white display-4">+10</h1>
-                    <h6 class="text-uppercase mb-0 text-white mt-3">Empresas Premium han confiado en nuestros servicios
-                    </h6>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="200">
-                    <h1 class="text-white display-4">+10</h1>
-                    <h6 class="text-uppercase mb-0 text-white mt-3">Ciudades donde tenemos Operación</h6>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- REVIEW -->
-    <section id="clientes" class="section-padding">
+    <!-- PROCESO + DIFERENCIALES -->
+    <section id="por-que" class="section-padding border-top">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="30">
                     <div class="section-title">
-                        <h1 class="display-4 fw-semibold">Nuestros Clientes</h1>
+                        <h1 class="display-4 fw-semibold">¿Por qué Eventex?</h1>
                         <div class="line"></div>
                     </div>
                 </div>
             </div>
-            <div class="row gy-5 gx-4">
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="50">
-                    <div class="review">
-                        <div class="review-head p-4 theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/alcaldia-de-chia.png" alt="">
-                            <div class="ms-3">
-                                <h5>Alcaldía de Chía</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="100">
-                    <div class="review">
-                        <div class="review-head p-4 theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/alcaldia-de-cota.png" alt="">
-                            <div class="ms-3">
-                                <h5>Alcaldía de Cota</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
-                    <div class="review">
-                        <div class="review-head p-4 theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/alcaldia-bogota.png" alt="">
-                            <div class="ms-3">
-                                <h5>Alcaldía de Bogotá</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="200">
-                    <div class="review">
-                        <div class="review-head p-4 theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/alcaldia-de-zipa.jpeg" alt="">
-                            <div class="ms-3">
-                                <h5>Alcaldía de Zipaquirá</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
-                    <div class="review">
-                        <div class="review-head p-4 theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/gobernacion-de-cundinamarca.jpeg" alt="">
-                            <div class="ms-3">
-                                <h5>Gobernación de Cundinamarca</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="300">
-                    <div class="review">
-                        <div class="review-head p-4 theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/policia-nacional-de-colombia.svg" alt="">
-                            <div class="ms-3">
-                                <h5>Policía Nacional de Colombia</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
-                    <div class="review">
-                        <div class="review-head p-4 theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/alcaldia-sopo.png" alt="">
-                            <div class="ms-3">
-                                <h5>Alcaldía de Sopó</h5>
-                            </div>
-                        </div>
-                    </div>
+
+            <div class="row g-5 align-items-start">
+                <!-- Proceso -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="mb-3">Cómo trabajamos</h3>
+                    <ul class="timeline">
+                        <li class="timeline-item">
+                            <span class="dot"></span>
+                            <h6 class="mb-1"><i class="ri-chat-1-line me-1"></i> Brief y objetivos</h6>
+                            <p class="mb-0">Entendemos alcance, audiencia, fechas y restricciones para definir el plan
+                                correcto.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="dot"></span>
+                            <h6 class="mb-1"><i class="ri-draft-line me-1"></i> Propuesta y presupuesto</h6>
+                            <p class="mb-0">Design & logística con opciones claras, tiempos y costos transparentes.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="dot"></span>
+                            <h6 class="mb-1"><i class="ri-settings-5-line me-1"></i> Producción y control de calidad
+                            </h6>
+                            <p class="mb-0">Coordinación de proveedores, montaje, pruebas y seguimiento continuo.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="dot"></span>
+                            <h6 class="mb-1"><i class="ri-truck-line me-1"></i> Entrega y post-evento</h6>
+                            <p class="mb-0">Operación en sitio, entrega final y retroalimentación para optimizar
+                                siguientes proyectos.</p>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="400">
-                    <div class="review">
-                        <div class="review-head p-4 theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
+                <!-- Diferenciales -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="120">
+                    <h3 class="mb-3">Diferenciales</h3>
+
+                    <div class="value-list">
+                        <div class="value-item">
+                            <div class="value-icon"><i class="ri-shirt-fill"></i></div>
+                            <div><strong>Fabricación directa</strong><br><small>Uniformes y EPP con especificaciones
+                                    técnicas y personalización.</small></div>
                         </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/rama-judicial.png" alt="">
-                            <div class="ms-3">
-                                <h5>Rama Judicial</h5>
-                            </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="ri-government-fill"></i></div>
+                            <div><strong>Operación integral de eventos</strong><br><small>Planeación, logística, BTL y
+                                    protocolos de principio a fin.</small></div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="ri-time-line"></i></div>
+                            <div><strong>Respuesta en 24–48 h hábiles</strong><br><small>Canales directos y seguimiento
+                                    activo.</small></div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="ri-map-pin-2-line"></i></div>
+                            <div><strong>Cobertura multi-ciudad</strong><br><small>Operación y entregas a nivel
+                                    nacional.</small></div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="ri-verified-badge-line"></i></div>
+                            <div><strong>Cumplimiento y trazabilidad</strong><br><small>Órdenes claras, tiempos y
+                                    control de calidad documentado.</small></div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="ri-wallet-3-line"></i></div>
+                            <div><strong>Transparencia presupuestal</strong><br><small>Sin letras pequeñas, sin
+                                    sorpresas.</small></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="450">
-                    <div class="review">
-                        <div class="review-head p-4 theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/armada-nacional-colombia.png" alt="">
-                            <div class="ms-3">
-                                <h5>Armada Nacional</h5>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-band mt-5" data-aos="fade-up" data-aos-delay="180">
+                <div class="cta-text">¿List@ para cotizar o agendar?</div>
+                <div class="cta-actions">
+                    <a class="btn btn-brand" href="mailto:info@eventex.com.co?subject=Cotizaci%C3%B3n%20Eventex">
+                        <i class="ri-mail-line me-1"></i> Solicitar cotización
+                    </a>
+                    <a class="btn btn-outline-dark" href="#conectemos">Ver canales de contacto</a>
                 </div>
+            </div>
+        </div>
     </section>
+
+
+
+    <section id="clientes" class="section-padding border-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="section-title">
+                <h1 class="display-4 fw-semibold">Clientes</h1>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Carrusel CSS-only -->
+        <div class="logo-ticker" aria-label="Clientes de Eventex">
+          <div class="logo-track">
+            <!-- Set 1 -->
+            <div class="logo-item"><img src="./assets/images/alcaldia-de-chia.png" alt="Alcaldía de Chía" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/alcaldia-de-cota.png" alt="Alcaldía de Cota" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/alcaldia-bogota.png" alt="Alcaldía de Bogotá" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/alcaldia-de-zipa.jpeg" alt="Alcaldía de Zipaquirá" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/gobernacion-de-cundinamarca.jpeg" alt="Gobernación de Cundinamarca" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/policia-nacional-de-colombia.svg" alt="Policía Nacional de Colombia" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/alcaldia-sopo.png" alt="Alcaldía de Sopó" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/rama-judicial.png" alt="Rama Judicial" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/armada-nacional-colombia.png" alt="Armada Nacional" loading="lazy" decoding="async"></div>
+      
+            <!-- Set 2 (duplicado para loop perfecto) -->
+            <div class="logo-item"><img src="./assets/images/alcaldia-de-chia.png" alt="Alcaldía de Chía" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/alcaldia-de-cota.png" alt="Alcaldía de Cota" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/alcaldia-bogota.png" alt="Alcaldía de Bogotá" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/alcaldia-de-zipa.jpeg" alt="Alcaldía de Zipaquirá" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/gobernacion-de-cundinamarca.jpeg" alt="Gobernación de Cundinamarca" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/policia-nacional-de-colombia.svg" alt="Policía Nacional de Colombia" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/alcaldia-sopo.png" alt="Alcaldía de Sopó" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/rama-judicial.png" alt="Rama Judicial" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./assets/images/armada-nacional-colombia.png" alt="Armada Nacional" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+      </section>
+      
 
     <!-- TEAM -->
     <section id="team" class="section-padding">
@@ -600,7 +541,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
     <script src="./assets/js/main.js"></script>
 
 </body>
