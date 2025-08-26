@@ -829,3 +829,267 @@ footer .line {
 .imgCatalogo {
     height: 200px;
 }
+
+/* ===== Dark Mode Patches (se aplican cuando <body> tiene .dark-theme) ===== */
+
+/* 2.1 Forzar utilidades claras a tomar tu paleta en dark */
+.dark-theme .bg-light {
+    background-color: var(--c-light) !important; /* en dark-theme: #2d2c2c */
+  }
+  
+  /* 2.2 Texto dentro de bloques claros en dark */
+  .dark-theme .bg-light h1,
+  .dark-theme .bg-light h2,
+  .dark-theme .bg-light h3,
+  .dark-theme .bg-light h4,
+  .dark-theme .bg-light h5,
+  .dark-theme .bg-light h6,
+  .dark-theme .bg-light p,
+  .dark-theme .bg-light a {
+    color: var(--c-dark);
+  }
+  
+  /* 2.3 Ajuste de botones outline en dark: mejor contraste */
+  .dark-theme .btn-outline-dark {
+    color: var(--c-dark);            /* var(--c-dark) es blanco en dark-theme */
+    border-color: var(--c-dark);
+  }
+  .dark-theme .btn-outline-dark:hover {
+    background-color: var(--c-dark);
+    color: var(--c-light);           /* gris oscuro de fondo */
+  }
+  
+  /* 2.4 Si AÚN usas la sección vieja #contacto con overlay, invierte en dark */
+  .dark-theme #contacto::after {
+    background: linear-gradient(
+                rgba(var(--c-brand-rgb), 0.25),
+                rgba(var(--c-brand-rgb), 0.25)
+              ),
+              url(../images/counter.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.7) contrast(1.05);
+  }
+  
+  /* Inputs del contacto en dark (si usas el formulario antiguo) */
+  .dark-theme #contacto .form-control {
+    background-color: #1f1f1f;
+    color: var(--c-dark);
+    border-color: #3a3a3a;
+  }
+  .dark-theme #contacto .form-control::placeholder { color: #9a9a9a; }
+  .dark-theme #contacto .form-control:focus {
+    border-color: var(--c-brand);
+    box-shadow: none;
+  }
+  
+  /* 2.5 AOS: asegura legibilidad al animar en dark dentro de bloques claros */
+  .dark-theme [data-aos] {
+    color: var(--c-dark);
+  }
+
+  /* Team card redondeada y más estilizada */
+.team-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--c-light);
+    border-radius: 16px; /* bordes más suaves */
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+    max-width: 360px;    /* no tan anchas */
+    margin: 0 auto;      /* centradas */
+  }
+  
+  .team-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  }
+  
+  .team-photo-wrapper {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: rgba(0,0,0,0.03);
+    overflow: hidden;
+  }
+  .team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .team-body {
+    padding: 16px;
+  }
+  
+  /* Divisores internos (ya los tenías, refuerzo) */
+  .textoTeam p {
+    border-bottom: 1px solid var(--c-brand);
+    padding-bottom: 10px;
+    margin: 0 auto 10px auto;
+    width: 90%;
+    font-size: 13px;
+  }
+  .textoTeam p:last-child { border-bottom: none; }
+  .ubicacion { display: block; margin-top: 5px; font-style: italic; }
+  
+  /* Botón separado del borde inferior */
+  .team-contact {
+    padding: 0 16px 20px 16px;
+    text-align: center;
+  }
+  
+  /* Dark mode coherente */
+  .dark-theme .team-card {
+    background-color: #1e1e1e;
+    border-color: rgba(255,255,255,0.08);
+  }
+  .dark-theme .textoTeam p {
+    border-bottom-color: rgba(var(--c-brand-rgb), 0.65);
+  }
+
+  /* Contact cards */
+.contact-card {
+    background: var(--c-light);
+    border: 1px solid rgba(0,0,0,.06);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    border-radius: 14px;
+  }
+  .contact-card__head { }
+  .contact-card__body { }
+  .contact-card__meta { margin-top: auto; color: var(--c-body); }
+  
+  .contact-badge {
+    background: rgba(var(--c-brand-rgb), .12);
+    color: var(--c-dark);
+    border: 1px solid rgba(var(--c-brand-rgb), .3);
+  }
+  
+  /* Mapa responsive */
+  .map-responsive { aspect-ratio: 16/10; }
+  .map-responsive iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  /* Dark mode */
+  .dark-theme .contact-card {
+    background: #1e1e1e;
+    border-color: rgba(255,255,255,.08);
+  }
+  .dark-theme .contact-badge {
+    background: rgba(var(--c-brand-rgb), .18);
+    border-color: rgba(var(--c-brand-rgb), .35);
+    color: var(--c-dark);
+  }
+
+  /* Quita el overlay naranja en LIGHT MODE para esta página */
+:not(.dark-theme) #contacto::after { display: none; }
+
+/* Fondo neutro suave bajo las tarjetas en LIGHT MODE */
+:not(.dark-theme) #contacto {
+  background: linear-gradient(180deg,
+              rgba(0,0,0,0) 0%,
+              rgba(0,0,0,0.03) 100%);
+}
+
+/* Mejora contraste de tarjetas en light */
+.contact-card {
+  background: var(--c-light);
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+}
+
+/* Badges más legibles en light */
+.contact-badge {
+  background: rgba(var(--c-brand-rgb), .10);
+  border: 1px solid rgba(var(--c-brand-rgb), .28);
+  color: var(--c-dark);
+}
+
+/* Botones dentro de contacto: que respiren mejor en móvil */
+.contact-card .btn { padding: 10px 14px; }
+
+/* ===== FAQ / Accordion (Contacto) ===== */
+#faq .accordion-item {
+    background: var(--c-light);
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,.06);
+    margin-bottom: 12px;            /* espacio entre items */
+  }
+  
+  /* Botón (título de cada pregunta) */
+  #faq .accordion-button {
+    background: transparent;
+    color: var(--c-dark);
+    font-weight: 600;
+    padding: 14px 16px;
+    transition: var(--transition);
+  }
+  
+  /* Estado abierto */
+  #faq .accordion-button:not(.collapsed) {
+    background: rgba(var(--c-brand-rgb), .12);
+    color: var(--c-dark);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.06);
+    border-bottom: 1px solid rgba(var(--c-brand-rgb), .3);
+  }
+  
+  /* Hover/focus accesible */
+  #faq .accordion-button:hover {
+    background: rgba(var(--c-brand-rgb), .08);
+  }
+  #faq .accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(var(--c-brand-rgb), .35);
+    border-color: var(--c-brand);
+  }
+  
+  /* Contenido de la respuesta */
+  #faq .accordion-body {
+    color: var(--c-body);
+    padding: 14px 16px 16px;
+    line-height: 1.65;
+  }
+  
+  /* Chevron: usa el de Bootstrap pero con mejor contraste y rotación suave */
+  #faq .accordion-button::after {
+    transition: transform .25s ease, filter .2s ease, opacity .2s ease;
+    opacity: .8;
+    filter: grayscale(1) brightness(0); /* chevron oscuro en light */
+  }
+  #faq .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+  }
+  
+  /* Dark mode */
+  .dark-theme #faq .accordion-item {
+    background: #1f1f1f;
+    border-color: rgba(255,255,255,.08);
+    box-shadow: 0 8px 20px rgba(255,255,255,.05);
+  }
+  .dark-theme #faq .accordion-button {
+    color: var(--c-dark);           /* en dark = blanco */
+  }
+  .dark-theme #faq .accordion-button:not(.collapsed) {
+    background: rgba(var(--c-brand-rgb), .18);
+    border-bottom-color: rgba(var(--c-brand-rgb), .35);
+  }
+  .dark-theme #faq .accordion-body {
+    color: var(--c-body);
+  }
+  .dark-theme #faq .accordion-button::after {
+    filter: invert(1) opacity(.85); /* chevron claro en dark */
+  }
+  
+  /* Ajuste de ancho y centrado del bloque FAQ (opcional) */
+  @media (min-width: 992px) {
+    #faq { max-width: 900px; margin: 0 auto; }
+  }
+  
+  
