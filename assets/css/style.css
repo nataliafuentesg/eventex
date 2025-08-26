@@ -1295,3 +1295,44 @@ html, body { overflow-x: hidden; }
 #por-que .col-lg-6, 
 #por-que .col-12 { padding-left: 0 !important; padding-right: 0 !important; }
 
+/* === ABOUT limpio (sin imagen) === */
+.about-simple{
+    background: var(--c-light);
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.05);
+  }
+  .dark-theme .about-simple{
+    background:#1e1e1e; border-color: rgba(255,255,255,.08);
+    box-shadow: 0 10px 24px rgba(255,255,255,.05);
+  }
+  
+  /* grid de puntos */
+  .about-points{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+  }
+  .point{
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 10px;
+    align-items: start;
+    background: rgba(var(--c-brand-rgb), .08);
+    border: 1px solid rgba(var(--c-brand-rgb), .24);
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+  .point i{ color: var(--c-brand); font-size: 20px; line-height: 1; }
+  .dark-theme .point{
+    background: rgba(var(--c-brand-rgb), .14);
+    border-color: rgba(var(--c-brand-rgb), .32);
+  }
+  
+  /* Resp: que nunca desborde en móvil */
+  @media (max-width: 576px){
+    .about-simple{ padding: 16px; }
+    .about-points{ grid-template-columns: 1fr; }
+  }
+  
