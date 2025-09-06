@@ -4,7 +4,7 @@
   <!-- Página principal -->
   <url>
     <loc>https://www.eventex.com.co/</loc>
-    <lastmod>2024-09-04</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- Página de dotaciones -->
   <url>
     <loc>https://www.eventex.com.co/assets/pages/dotaciones.html</loc>
-    <lastmod>2024-09-04</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,7 +20,7 @@
   <!-- Página de eventos -->
   <url>
     <loc>https://www.eventex.com.co/assets/pages/eventos.html</loc>
-    <lastmod>2024-09-04</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -28,7 +28,7 @@
   <!-- Página de contacto -->
   <url>
     <loc>https://www.eventex.com.co/assets/pages/contacto.html</loc>
-    <lastmod>2024-09-04</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

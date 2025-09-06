@@ -1681,3 +1681,40 @@ body {
   .map-figure{ border-radius: 10px; aspect-ratio: 3 / 2; } /* un poco más alta en móvil */
   .city-chips{ grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
 }
+
+/* Footer: badge MarcaPro destacado */
+.dev-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    padding:8px 12px;
+    border-radius:999px;
+    background: rgba(var(--c-brand-rgb), .16);
+    border:1px solid rgba(var(--c-brand-rgb), .45);
+    color:#fff;
+    font-weight:700;
+    letter-spacing:.01em;
+    text-decoration:none;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+  }
+  .dev-badge:hover{
+    transform: translateY(-1px);
+    background: rgba(var(--c-brand-rgb), .22);
+    border-color: rgba(var(--c-brand-rgb), .65);
+    box-shadow: 0 8px 22px rgba(0,0,0,.25);
+  }
+  .dev-dot{
+    width:10px; height:10px; border-radius:50%;
+    background: var(--c-brand);
+    box-shadow: 0 0 0 3px rgba(var(--c-brand-rgb), .25);
+  }
+  .dev-text{ color:#fff; }
+  .dev-text strong{ color:#fff; font-weight:800; }
+  .dev-ext{ opacity:.85; }
+  
+  /* Dark mode coherente (ya estás en bg-dark, pero por si acaso) */
+  .dark-theme .dev-badge{
+    background: rgba(var(--c-brand-rgb), .2);
+    border-color: rgba(var(--c-brand-rgb), .6);
+  }
+  
