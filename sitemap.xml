@@ -3,7 +3,7 @@
 
   <!-- Página principal -->
   <url>
-    <loc>https://www.eventexsas.com/</loc>
+    <loc>https://www.eventex.com.co/</loc>
     <lastmod>2024-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Página de dotaciones -->
   <url>
-    <loc>https://www.eventexsas.com/assets/pages/dotaciones.html</loc>
+    <loc>https://www.eventex.com.co/assets/pages/dotaciones.html</loc>
     <lastmod>2024-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19,7 +19,7 @@
 
   <!-- Página de eventos -->
   <url>
-    <loc>https://www.eventexsas.com/assets/pages/eventos.html</loc>
+    <loc>https://www.eventex.com.co/assets/pages/eventos.html</loc>
     <lastmod>2024-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -27,15 +27,7 @@
 
   <!-- Página de contacto -->
   <url>
-    <loc>https://www.eventexsas.com/assets/pages/contacto.html</loc>
-    <lastmod>2024-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Página de instalaciones -->
-  <url>
-    <loc>https://www.eventexsas.com/assets/pages/instalaciones.html</loc>
+    <loc>https://www.eventex.com.co/assets/pages/contacto.html</loc>
     <lastmod>2024-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
