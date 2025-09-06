@@ -1,1 +1,5 @@
 assets/videos/EVENTO EVENTEX.mp4
+.DS_Store
+assets/**/.DS_Store
+assets/videos/*.mp4
+!assets/videos/eventex-hero-720p.mp4
