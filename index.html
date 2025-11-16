@@ -2,699 +2,636 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-    <link rel="shortcut icon" href="./assets/images/x.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Eventex - Dotaciones y Organización de Eventos en Bogotá | Calidad y Profesionalismo</title>
-    <meta name="description"
-        content="Eventex ofrece servicios profesionales de dotaciones y organización de eventos en Bogotá. Atención personalizada, calidad y experiencia en eventos corporativos, sociales y más. ¡Contáctanos para tu próximo evento!">
-    <meta name="keywords"
-        content="dotaciones, organización de eventos, eventos en Bogotá, servicios de dotaciones, eventos corporativos, eventos sociales, organización de eventos Bogotá, Eventex, servicios personalizados, galería de eventos, contacto Eventex">
-    <meta name="facebook-domain-verification" content="n0t8n4ve8gwj51g1npr2g9t9sa4mex" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Plantilla Web — Servicios Corporativos</title>
+  <meta name="description"
+        content="Plantilla web moderna y adaptable para empresas de servicios. Ideal para mostrar tu portafolio y principales líneas de negocio.">
+
+  <!-- Bootstrap + Remixicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Fancybox (si lo usas en otras páginas) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+
+  <!-- Tu CSS principal con la paleta verde -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Estilos extra SOLO para el botón de tema (sol / luna) -->
+  <style>
+    .btn-theme-toggle {
+      border: none;
+      background: transparent;
+      padding: 4px;
+      margin-left: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-size: 1.3rem;
+      color: var(--text-main);
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-theme-toggle:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+      transform: translateY(-1px);
+    }
+
+    .dark-theme .btn-theme-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .btn-theme-toggle .icon-moon {
+      display: none;
+    }
+
+    .dark-theme .btn-theme-toggle .icon-sun {
+      display: none;
+    }
+
+    .dark-theme .btn-theme-toggle .icon-moon {
+      display: inline-block;
+    }
+  </style>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-53G09Z2DGM"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-53G09Z2DGM');
-</script>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
 
-    <nav class="navbar navbar-expand-lg sticky-top">
+  <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-sticky">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <!-- Logo para modo claro -->
-                <img src="./assets/images/logo-black.svg" class="logo logo-light" alt="logo eventex">
-                <!-- Logo para modo oscuro -->
-                <img src="./assets/images/logo-blanco.svg" class="logo logo-dark" alt="logo eventex">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
+        <div class="brand-placeholder d-flex align-items-center justify-content-center">
+          <span class="fw-bold">TU</span>
+        </div>
+        <span class="fw-semibold">Tu Marca Aquí</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#hero">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/assets/pages/services.html">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/assets/pages/contacto.html">Contacto</a>
+          </li>
+
+          <!-- Botón de tema (sol / luna) -->
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button class="btn-theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+              <i class="ri-sun-line icon-sun"></i>
+              <i class="ri-moon-line icon-moon"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hero">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./assets/pages/dotaciones.html">Dotaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./assets/pages/eventos.html">Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#clientes">Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#team">Nuestro Equipo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./assets/pages/contacto.html">Contacto</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <span style="padding-left: 10px !important;"> Dark Mode</span>
-                    </li>
-                    <li class="nav-item">
-
-                        <div class="toggle-switch">
-                            <label class="switch-label" data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show">
-                                <input type="checkbox" class="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-
-    </nav>
-
-    <!-- HERO -->
-    <section id="hero" class="hero">
-        <div class="hero-media">
-            <div class="slide s1" style="background-image:url('./assets/images/banner-eventex-2.png')"></div>
-            <div class="slide s2" style="background-image:url('./assets/images/banner-eventex-3.png')"></div>
-            <div class="slide s3" style="background-image:url('./assets/images/concierto.jpg')"></div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
-                    <h1 class="hero-title">
-                        Logística de Eventos y <span class="accent">Dotaciones</span>
-                    </h1>
-                    <p class="hero-sub">
-                        Planeación, logística y fabricación directa para marcas y entidades que exigen resultados.
-                    </p>
-                    <div class="d-flex gap-2 flex-wrap">
-                        <a class="btn btn-brand" href="mailto:info@eventex.com.co?subject=Cotizaci%C3%B3n%20Eventex">
-                            <i class="ri-mail-line me-1"></i> Solicitar cotización
-                        </a>
-                        <a class="btn btn-outline-dark" href="#conectemos">Ver canales de contacto</a>
-                    </div>
-                    <ul class="hero-bullets mt-4">
-                        <li><i class="ri-check-line"></i> Operación integral de eventos</li>
-                        <li><i class="ri-check-line"></i> Dotaciones y EPP con control de calidad</li>
-                        <li><i class="ri-check-line"></i> Entregas a tiempo, sin sorpresas</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- ABOUT -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold pt-4">Nosotros</h1>
-                        <div class="line"></div>
-                        <p class="textLogo">Fomentamos el desarrollo</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-9">
-                    <div class="about-simple">
-
-                        <!-- 👇 NUEVO: Video responsive con controles -->
-                        <div class="about-video mb-3">
-                            <video class="about-video__el" controls playsinline muted autoplay loop preload="metadata"
-                                poster="./assets/videos/cover-video.png">
-                                <source src="./assets/videos/eventex-hero-720p.mp4" type="video/mp4">
-                                Tu navegador no soporta video HTML5.
-                            </video>
-                        </div>
-
-                        <!-- /video -->
-
-                        <p class="lead mb-3">
-                            Somos una empresa colombiana que fabrica, distribuye y comercializa dotación textil para
-                            sector privado y público. Además, operamos eventos de alto nivel: culturales, corporativos y
-                            de protocolo,
-                            con foco en cumplimiento, control de calidad y tiempos.
-                        </p>
-
-                        <div class="about-points">
-                            <div class="point">
-                                <i class="ri-checkbox-circle-line"></i>
-                                <div><strong>Operación integral</strong><br><small>Planeación, logística, BTL y
-                                        ejecución end-to-end.</small></div>
-                            </div>
-                            <div class="point">
-                                <i class="ri-shirt-fill"></i>
-                                <div><strong>Fabricación directa</strong><br><small>Uniformes y EPP con especificaciones
-                                        técnicas.</small></div>
-                            </div>
-                            <div class="point">
-                                <i class="ri-verified-badge-line"></i>
-                                <div><strong>Control de calidad</strong><br><small>Trazabilidad y pruebas antes de
-                                        entrega.</small></div>
-                            </div>
-                            <div class="point">
-                                <i class="ri-map-pin-2-line"></i>
-                                <div><strong>Cobertura nacional</strong><br><small>Operación y entregas
-                                        multi-ciudad.</small></div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex flex-wrap gap-2 mt-3">
-                            <a class="btn btn-brand" href="mailto:info@eventex.com.co?subject=Consulta%20Eventex">
-                                <i class="ri-mail-line me-1"></i> Escribir a Eventex
-                            </a>
-                            <a class="btn btn-outline-dark" href="./assets/pages/dotaciones.html">Ver dotaciones</a>
-                            <a class="btn btn-outline-dark" href="./assets/pages/eventos.html">Ver eventos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- SERVICES -->
-    <section id="services" class="section-padding border-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold">Servicios</h1>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-4 justify-content-center">
-                <!-- Card: Dotaciones -->
-                <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="80">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="ri-shirt-fill"></i></div>
-                        <h5 class="mb-2">Dotaciones</h5>
-                        <p class="mb-3">Fabricación directa, especificaciones técnicas y control de calidad. Uniformes,
-                            EPP y más.</p>
-                        <a class="btn btn-brand" href="./assets/pages/dotaciones.html">Más información</a>
-                    </div>
-                </div>
-
-                <!-- Card: Eventos -->
-                <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="140">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="ri-government-fill"></i></div>
-                        <h5 class="mb-2">Logística y Eventos</h5>
-                        <p class="mb-3">Planeación y operación integral. Activaciones BTL, lanzamientos y eventos de
-                            protocolo.</p>
-                        <a class="btn btn-outline-dark" href="./assets/pages/eventos.html">Más información</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- PROCESO + DIFERENCIALES -->
-    <section id="por-que" class="section-padding border-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="30">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold">¿Por qué Eventex?</h1>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-5 align-items-start">
-                <!-- Proceso -->
-                <!-- Columna IZQUIERDA (reemplaza la <ul class="timeline"> entera) -->
-                <div class="col-lg-6">
-                    <h3 class="mb-3">Cómo trabajamos</h3>
-
-                    <ol class="process">
-                        <li class="process-item">
-                            <span class="process-badge"><i class="ri-chat-1-line"></i></span>
-                            <div>
-                                <h6 class="mb-1">Brief y objetivos</h6>
-                                <p class="mb-0">Entendemos alcance, audiencia, fechas y restricciones para definir el
-                                    plan correcto.</p>
-                            </div>
-                        </li>
-
-                        <li class="process-item">
-                            <span class="process-badge"><i class="ri-draft-line"></i></span>
-                            <div>
-                                <h6 class="mb-1">Propuesta y presupuesto</h6>
-                                <p class="mb-0">Design & logística con opciones claras, tiempos y costos transparentes.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li class="process-item">
-                            <span class="process-badge"><i class="ri-settings-5-line"></i></span>
-                            <div>
-                                <h6 class="mb-1">Producción y control de calidad</h6>
-                                <p class="mb-0">Coordinación de proveedores, montaje, pruebas y seguimiento continuo.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li class="process-item">
-                            <span class="process-badge"><i class="ri-truck-line"></i></span>
-                            <div>
-                                <h6 class="mb-1">Entrega y post-evento</h6>
-                                <p class="mb-0">Operación en sitio, entrega final y retroalimentación para optimizar
-                                    siguientes proyectos.</p>
-                            </div>
-                        </li>
-                    </ol>
-                </div>
-
-                <!-- Diferenciales -->
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="120">
-                    <h3 class="mb-3">Diferenciales</h3>
-
-                    <div class="value-list">
-                        <div class="value-item">
-                            <div class="value-icon"><i class="ri-shirt-fill"></i></div>
-                            <div><strong>Fabricación directa</strong><br><small>Uniformes y EPP con especificaciones
-                                    técnicas y personalización.</small></div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon"><i class="ri-government-fill"></i></div>
-                            <div><strong>Operación integral de eventos</strong><br><small>Planeación, logística, BTL y
-                                    protocolos de principio a fin.</small></div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon"><i class="ri-time-line"></i></div>
-                            <div><strong>Respuesta en 24–48 h hábiles</strong><br><small>Canales directos y seguimiento
-                                    activo.</small></div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon"><i class="ri-map-pin-2-line"></i></div>
-                            <div><strong>Cobertura multi-ciudad</strong><br><small>Operación y entregas a nivel
-                                    nacional.</small></div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon"><i class="ri-verified-badge-line"></i></div>
-                            <div><strong>Cumplimiento y trazabilidad</strong><br><small>Órdenes claras, tiempos y
-                                    control de calidad documentado.</small></div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon"><i class="ri-wallet-3-line"></i></div>
-                            <div><strong>Transparencia presupuestal</strong><br><small>Sin letras pequeñas, sin
-                                    sorpresas.</small></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="cta-band mt-5" data-aos="fade-up" data-aos-delay="180">
-                <div class="cta-text">¿List@ para cotizar o agendar?</div>
-                <div class="cta-actions">
-                    <a class="btn btn-brand" href="mailto:info@eventex.com.co?subject=Cotizaci%C3%B3n%20Eventex">
-                        <i class="ri-mail-line me-1"></i> Solicitar cotización
-                    </a>
-                    <a class="btn btn-outline-dark" href="#conectemos">Ver canales de contacto</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRESENCIA / MAPA -->
-    <section id="presencia" class="section-padding border-top">
-        <div class="container">
-            <div class="row align-items-center g-4">
-
-                <!-- Mapa (izquierda en desktop) -->
-                <div class="col-lg-6">
-                    <figure class="map-card">
-                        <div class="map-figure">
-                            <!-- Versión light -->
-                            <img class="map-img map-img--light" src="./assets/images/mapa-colombia-light.png"
-                                alt="Mapa de Colombia con ciudades donde Eventex ha tenido presencia" loading="lazy"
-                                decoding="async">
-                            <!-- Versión dark -->
-                            <img class="map-img map-img--dark" src="./assets/images/mapa-colombia-dark.png"
-                                alt="Mapa (modo oscuro) de Colombia con ciudades donde Eventex ha tenido presencia"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <figcaption class="map-caption">
-                            <i class="ri-map-pin-2-line"></i> Cobertura nacional por proyecto
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <!-- Texto (derecha en desktop) -->
-                <div class="col-lg-6">
-                    <h2 class="mb-2">Eventex por Colombia</h2>
-                    <p class="mb-3">
-                        Operamos y entregamos en múltiples ciudades del país, con equipos y aliados
-                        logísticos para responder con calidad y a tiempo.
-                    </p>
-
-                    <!-- Diferenciales cortos -->
-                    <div class="value-mini">
-                        <div class="value-mini__item"><i class="ri-time-line"></i> Plazos firmes</div>
-                        <div class="value-mini__item"><i class="ri-verified-badge-line"></i> Control de calidad</div>
-                        <div class="value-mini__item"><i class="ri-truck-line"></i> Logística en sitio</div>
-                    </div>
-
-                    <div class="d-flex flex-wrap gap-2 mt-3">
-                        <a class="btn btn-brand"
-                            href="mailto:info@eventex.com.co?subject=Cotizaci%C3%B3n%20por%20ciudad">
-                            <i class="ri-mail-line me-1"></i> Solicitar cotización
-                        </a>
-                        <a class="btn btn-outline-dark" href="./assets/pages/eventos.html">Eventos</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-
-    <section id="clientes" class="section-padding border-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold">Clientes</h1>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Carrusel CSS-only -->
-        <div class="logo-ticker" aria-label="Clientes de Eventex">
-            <div class="logo-track">
-                <!-- Set 1 -->
-                <div class="logo-item"><img src="./assets/images/alcaldia-de-chia.png" alt="Alcaldía de Chía"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/alcaldia-de-cota.png" alt="Alcaldía de Cota"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/alcaldia-bogota.png" alt="Alcaldía de Bogotá"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/alcaldia-de-zipa.jpeg" alt="Alcaldía de Zipaquirá"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/gobernacion-de-cundinamarca.jpeg"
-                        alt="Gobernación de Cundinamarca" loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/policia-nacional-de-colombia.svg"
-                        alt="Policía Nacional de Colombia" loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/alcaldia-sopo.png" alt="Alcaldía de Sopó"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/rama-judicial.png" alt="Rama Judicial" loading="lazy"
-                        decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/armada-nacional-colombia.png" alt="Armada Nacional"
-                        loading="lazy" decoding="async"></div>
-
-                <!-- Set 2 (duplicado para loop perfecto) -->
-                <div class="logo-item"><img src="./assets/images/alcaldia-de-chia.png" alt="Alcaldía de Chía"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/alcaldia-de-cota.png" alt="Alcaldía de Cota"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/alcaldia-bogota.png" alt="Alcaldía de Bogotá"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/alcaldia-de-zipa.jpeg" alt="Alcaldía de Zipaquirá"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/gobernacion-de-cundinamarca.jpeg"
-                        alt="Gobernación de Cundinamarca" loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/policia-nacional-de-colombia.svg"
-                        alt="Policía Nacional de Colombia" loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/alcaldia-sopo.png" alt="Alcaldía de Sopó"
-                        loading="lazy" decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/rama-judicial.png" alt="Rama Judicial" loading="lazy"
-                        decoding="async"></div>
-                <div class="logo-item"><img src="./assets/images/armada-nacional-colombia.png" alt="Armada Nacional"
-                        loading="lazy" decoding="async"></div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- TEAM -->
-    <section id="team" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold">Nuestro Equipo</h1>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center g-4 team-two">
-                <!-- Card 1 -->
-                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
-                    <div class="team-card theme-shadow h-100">
-                        <div class="team-photo-wrapper">
-                            <img class="team-photo" src="./assets/images/alberto-palacio.jpeg"
-                                alt="Alberto Andrés Palacio, Gerente Operativo">
-                        </div>
-                        <div class="team-body">
-                            <h5 class="mb-1 text-center">Alberto Andrés Palacio</h5>
-                            <p class="cargo mb-3 text-center">Gerente Operativo</p>
-
-                            <div class="textoTeam">
-                                <p>Negocios Internacionales<span class="ubicacion">Universidad de La Sabana</span></p>
-                                <p>Hult International Business<span class="ubicacion">London</span></p>
-                                <p>Experiencia en negociación internacional y desarrollo de gestión de proyectos
-                                    licitatorios.</p>
-                            </div>
-                        </div>
-                        <div class="team-contact">
-                            <a href="mailto:alberto.palacio@eventex.com.co?subject=Contacto%20Eventex"
-                                class="btn btn-brand btn-sm">
-                                <i class="ri-mail-line me-1"></i> Escribir
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="team-card theme-shadow h-100">
-                        <div class="team-photo-wrapper">
-                            <img class="team-photo" src="./assets/images/Simon-giraldo.png"
-                                alt="Simon Giraldo, Gerente Administrativo">
-                        </div>
-                        <div class="team-body">
-                            <h5 class="mb-1 text-center">Simon Giraldo</h5>
-                            <p class="cargo mb-3 text-center">Gerente Administrativo</p>
-
-                            <div class="textoTeam">
-                                <p>Trader profesional<span class="ubicacion">Day Trading Academy · New York, USA</span>
-                                </p>
-                                <p>Innovación y Economía de Datos<span class="ubicacion">U. Sergio Arboleda</span></p>
-                                <p>Amplia trayectoria en mercados financieros, manejo de capital de riesgo y operaciones
-                                    logísticas.</p>
-                            </div>
-                        </div>
-                        <div class="team-contact">
-                            <a href="mailto:simon.giraldo@eventex.com.co?subject=Contacto%20Eventex"
-                                class="btn btn-brand btn-sm">
-                                <i class="ri-mail-line me-1"></i> Escribir
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /row -->
-        </div>
-    </section>
-
-
-
-    <!-- CONTACT -->
-    <section id="contact" class="section-padding bg-light" data-aos="fade-up">
-        <div class="container text-center">
-            <h2 class="fw-semibold mb-3">Conectemos</h2>
-            <div class="line"></div>
-            <p class="mb-4">Síguenos o escríbenos para cotizaciones y portafolios.</p>
-
-            <div class="d-flex flex-wrap gap-3 justify-content-center">
-                <a class="btn btn-brand"
-                    href="https://wa.me/573168592662?text=Hola%20Eventex%2C%20quiero%20informaci%C3%B3n" target="_blank"
-                    rel="noopener">
-                    <i class="ri-whatsapp-fill me-1"></i> WhatsApp
-                </a>
-
-                <a class="btn btn-outline-dark"
-                    href="mailto:info@eventex.com.co?subject=Solicitud%20de%20portafolio&body=Hola%20Eventex%2C%20quiero%20recibir%20su%20portafolio.">
-                    <i class="ri-mail-line me-1"></i> Correo
-                </a>
-
-                <a class="btn btn-outline-dark" href="https://www.instagram.com/eventexsas/" target="_blank"
-                    rel="noopener">
-                    <i class="ri-instagram-fill me-1"></i> Instagram
-                </a>
-
-                <a class="btn btn-outline-dark" href="https://www.linkedin.com/company/eventex-s-a-s/" target="_blank"
-                    rel="noopener">
-                    <i class="ri-linkedin-box-fill me-1"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- FOOTER -->
-    <!-- FOOTER -->
-    <footer class="bg-dark">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row gy-5">
-                    <div class="col-lg-3 col-sm-6">
-                        <img src="./assets/images/logo-blanco.svg" class="logoFooter" alt="logo footer">
-                        <div class="line"></div>
-
-                        <div class="d-grid gap-2 my-2">
-                            <a href="mailto:info@eventex.com.co?subject=Solicitud%20de%20portafolio"
-                                class="btn btn-brand btn-sm">
-                                <i class="ri-mail-line me-1"></i> Solicitar Portafolio
-                            </a>
-                            <a href="https://wa.me/573168592662?text=Hola%20Eventex,%20quiero%20recibir%20el%20portafolio"
-                                target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">
-                                <i class="ri-whatsapp-fill me-1"></i> Pedir por WhatsApp
-                            </a>
-                        </div>
-
-                        <div class="social-icons">
-                            <a href="https://wa.me/+573168592662" target="_blank" rel="noopener"><i
-                                    class="ri-whatsapp-fill"></i></a>
-                            <a href="https://www.instagram.com/eventexsas/" target="_blank" rel="noopener"><i
-                                    class="ri-instagram-fill"></i></a>
-                            <a href="https://www.linkedin.com/company/eventex-s-a-s/" target="_blank" rel="noopener"><i
-                                    class="ri-linkedin-box-fill"></i></a>
-                            <a href="mailto:info@eventex.com.co"><i class="ri-mail-line"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-sm-6">
-                        <h5 class="mb-0 text-white">SERVICIOS</h5>
-                        <div class="line"></div>
-                        <ul>
-                            <li><a href="./assets/pages/dotaciones.html">Dotación Empresarial</a></li>
-                            <li><a href="./assets/pages/dotaciones.html">Dotación Gubernamental</a></li>
-                            <li><a href="./assets/pages/eventos.html">Eventos</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-sm-6">
-                        <h5 class="mb-0 text-white">SEDES</h5>
-                        <div class="line"></div>
-                        <ul>
-                            <li>
-                                <a href="https://maps.app.goo.gl/AtaGD9zbdef87qK97" target="_blank" rel="noopener">
-                                    <i class="ri-map-pin-2-fill"></i> Bogotá : Calle 138# 11-18 Oficina 01
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-sm-6">
-                        <h5 class="mb-0 text-white">CONTACTO</h5>
-                        <div class="line"></div>
-                        <ul>
-                            <li><a href="tel:+573168592662">+57 316 859 2662</a></li>
-                            <li><a href="mailto:info@eventex.com.co">info@eventex.com.co</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- bottom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row g-3 align-items-center justify-content-between">
-                    <!-- MarcaPro destacado a la izquierda -->
-                    <div class="col-auto">
-                        <a class="dev-badge" href="https://marcapro.agency/" target="_blank" rel="noopener"
-                            aria-label="Desarrollado por MarcaPro">
-                            <span class="dev-dot"></span>
-                            <span class="dev-text">Desarrollado por <strong>MarcaPro</strong></span>
-                            <i class="ri-external-link-line dev-ext"></i>
-                        </a>
-                    </div>
-
-                    <!-- Copyright a la derecha -->
-                    <div class="col-auto">
-                        <p class="mb-0">© Eventex. Todos los derechos reservados</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-    <div class="whatsapp-button">
-        <a class="linkChat" href="https://wa.me/+573168592662" target="_blank">
-            <i class="ri-whatsapp-fill"></i>
-        </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <!-- Mantiene las imágenes de stock -->
+    <div class="hero-media">
+      <div class="slide s1" style="background-image:url('./assets/images/banner-eventex-2.png')"></div>
+      <div class="slide s2" style="background-image:url('./assets/images/banner-eventex-3.png')"></div>
+      <div class="slide s3" style="background-image:url('./assets/images/concierto.jpg')"></div>
     </div>
 
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-lg-8" data-aos="fade-up">
+          <h1 class="hero-title">
+            Tu próxima <span class="accent">página corporativa</span>
+          </h1>
+          <p class="hero-sub">
+            Una plantilla versátil para empresas de servicios: consultorías, agencias, producción, logística, educación,
+            salud, tecnología y más.
+          </p>
 
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-brand" href="#contact">
+              <i class="ri-mail-line me-1"></i> Me interesa esta plantilla
+            </a>
+            <a class="btn btn-outline-dark" href="/assets/pages/services.html">
+              Ver página de servicios
+            </a>
+          </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
-    <script src="./assets/js/main.js"></script>
-    <script>
-        (function () {
-            const TOGGLE_SELECTOR = '.toggle-switch .checkbox';
-            const checkbox = document.querySelector(TOGGLE_SELECTOR);
+          <ul class="hero-bullets mt-4">
+            <li><i class="ri-check-line"></i> Diseño adaptable a cualquier marca.</li>
+            <li><i class="ri-check-line"></i> Secciones listas para personalizar.</li>
+            <li><i class="ri-check-line"></i> Ideal como demo para tu portafolio.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            function applyTheme(theme) {
-                // aplica en <body> (y de paso asegúrate en <html> por si el anti-FOUC la puso)
-                document.documentElement.classList.toggle('dark-theme', theme === 'dark');
-                document.body.classList.toggle('dark-theme', theme === 'dark');
-                if (checkbox) checkbox.checked = (theme === 'dark');
-            }
+  <!-- ABOUT -->
+  <section id="about" class="section-padding">
+    <div class="container">
 
-            function getTheme() {
-                try { return localStorage.getItem('theme') || 'light'; } catch (e) { return 'light'; }
-            }
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold pt-4">Nosotros</h1>
+            <div class="line"></div>
+            <p class="textLogo">Un espacio para contar quién eres</p>
+          </div>
+        </div>
+      </div>
 
-            // 1) aplica el tema guardado
-            applyTheme(getTheme());
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="about-simple">
 
-            // 2) engancha el toggle solo si existe (index a veces no lo tiene o cambia el markup)
-            if (checkbox) {
-                checkbox.addEventListener('change', () => {
-                    const theme = checkbox.checked ? 'dark' : 'light';
-                    try { localStorage.setItem('theme', theme); } catch (e) { }
-                    applyTheme(theme);
-                }, { passive: true });
-            }
-        })();
-    </script>
+            <!-- Video placeholder -->
+            <div class="about-video mb-3">
+              <div class="video-placeholder text-center p-4">
+                <i class="ri-play-circle-line display-5 d-block mb-2"></i>
+                <p class="fw-semibold mb-1">Aquí puedes incrustar tu video</p>
+                <p class="small mb-0">
+                  Presentación corporativa, reel, resumen de servicios, testimonio de clientes, etc.
+                </p>
+              </div>
+            </div>
 
+            <p class="lead mb-3">
+              Este espacio está diseñado para que expliques la historia y filosofía de tu empresa: a quién sirves,
+              qué te diferencia y cómo entiendes el trabajo con tus clientes.
+            </p>
+
+            <div class="about-points">
+              <div class="point">
+                <i class="ri-check-double-line"></i>
+                <div><strong>Experiencia real</strong><br><small>Cuenta tu trayectoria de forma clara y creíble.</small></div>
+              </div>
+              <div class="point">
+                <i class="ri-team-line"></i>
+                <div><strong>Equipo profesional</strong><br><small>Describe fortalezas y roles clave.</small></div>
+              </div>
+              <div class="point">
+                <i class="ri-verified-badge-line"></i>
+                <div><strong>Calidad y confianza</strong><br><small>Procesos, estándares o certificaciones.</small></div>
+              </div>
+              <div class="point">
+                <i class="ri-map-pin-2-line"></i>
+                <div><strong>Cobertura flexible</strong><br><small>Local, regional o nacional.</small></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES (versión resumen en home) -->
+  <section id="services" class="section-padding border-top">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold">Servicios</h1>
+            <div class="line"></div>
+            <p>Un resumen de tus líneas principales. El detalle está en la página de servicios.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon"><i class="ri-briefcase-line"></i></div>
+            <h5 class="mb-2">Servicio principal</h5>
+            <p>
+              Tu servicio estrella: el que más valor genera. Aquí va una descripción corta y clara.
+            </p>
+            <a class="btn btn-brand btn-sm" href="/assets/pages/service-1.html">
+              Ver detalle
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon"><i class="ri-stack-line"></i></div>
+            <h5 class="mb-2">Servicio complementario</h5>
+            <p>
+              Un servicio que acompaña o expande la oferta principal: soporte, mantenimiento, etc.
+            </p>
+            <a class="btn btn-outline-dark btn-sm" href="/assets/pages/service-2.html">
+              Ver detalle
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon"><i class="ri-lightbulb-line"></i></div>
+            <h5 class="mb-2">Servicio especializado</h5>
+            <p>
+              Servicios más a medida o de ticket alto: proyectos especiales, estrategia, formación, etc.
+            </p>
+            <a class="btn btn-outline-dark btn-sm" href="/assets/pages/service-3.html">
+              Ver detalle
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso" class="section-padding border-top">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold">Cómo trabajamos</h1>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-6">
+          <h3 class="mb-3">Proceso general</h3>
+          <ol class="process">
+            <li class="process-item">
+              <span class="process-badge"><i class="ri-chat-1-line"></i></span>
+              <div>
+                <h6>Brief y objetivos</h6>
+                <p>Comprensión del contexto, metas y restricciones del cliente.</p>
+              </div>
+            </li>
+            <li class="process-item">
+              <span class="process-badge"><i class="ri-draft-line"></i></span>
+              <div>
+                <h6>Propuesta y presupuesto</h6>
+                <p>Opciones claras, alcances definidos, tiempos y costos transparentes.</p>
+              </div>
+            </li>
+            <li class="process-item">
+              <span class="process-badge"><i class="ri-settings-5-line"></i></span>
+              <div>
+                <h6>Ejecución / Producción</h6>
+                <p>Implementación del servicio, coordinación de equipo y seguimiento.</p>
+              </div>
+            </li>
+            <li class="process-item">
+              <span class="process-badge"><i class="ri-checkbox-circle-line"></i></span>
+              <div>
+                <h6>Entrega y seguimiento</h6>
+                <p>Cierre del proyecto, entregables y próximos pasos.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="col-lg-6">
+          <h3 class="mb-3">Diferenciales</h3>
+          <div class="value-list">
+            <div class="value-item">
+              <div class="value-icon"><i class="ri-team-line"></i></div>
+              <div><strong>Equipo especializado</strong><br><small>Perfiles alineados con el tipo de proyectos.</small></div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><i class="ri-time-line"></i></div>
+              <div><strong>Cumplimiento</strong><br><small>Respeto por las fechas y acuerdos.</small></div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><i class="ri-lightbulb-flash-line"></i></div>
+              <div><strong>Soluciones creativas</strong><br><small>Propuestas adaptadas a cada cliente.</small></div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><i class="ri-bill-line"></i></div>
+              <div><strong>Transparencia</strong><br><small>Costos claros y procesos documentados.</small></div>
+            </div>
+          </div>
+
+          <div class="cta-band mt-4">
+            <div class="cta-text">¿Te imaginas explicar aquí el proceso de tu empresa?</div>
+            <div class="cta-actions">
+              <a class="btn btn-brand btn-sm" href="#contact">
+                <i class="ri-mail-line me-1"></i> Quiero usar esta estructura
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRESENCIA / MAPA (placeholder) -->
+  <section id="presencia" class="section-padding border-top">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <figure class="map-card">
+            <div class="map-figure">
+              <div class="map-placeholder text-center">
+                <i class="ri-map-pin-2-line display-6 d-block mb-2"></i>
+                <p class="fw-semibold mb-1">Aquí puedes mostrar un mapa de cobertura</p>
+                <p class="small mb-0">
+                  Regiones, ciudades o países donde prestas servicio.
+                </p>
+              </div>
+            </div>
+            <figcaption class="map-caption">
+              <i class="ri-road-map-line"></i> Personaliza esta sección según tu operación.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-lg-6">
+          <h2 class="mb-2">Cobertura geográfica</h2>
+          <p class="mb-3">
+            Usa este texto para explicar si trabajas a nivel local, regional, nacional o internacional y cómo gestionas
+            tus proyectos en diferentes ubicaciones.
+          </p>
+
+          <div class="value-mini">
+            <div class="value-mini__item"><i class="ri-road-map-line"></i> Operación por proyecto</div>
+            <div class="value-mini__item"><i class="ri-contacts-line"></i> Aliados y proveedores</div>
+            <div class="value-mini__item"><i class="ri-truck-line"></i> Logística y coordinación</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES / PROYECTOS -->
+  <section id="clientes" class="section-padding border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold">Proyectos / Clientes</h1>
+            <div class="line"></div>
+            <p>Reemplaza estos placeholders por los logos de tus clientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="logo-ticker" aria-label="Clientes de la empresa">
+      <div class="logo-track">
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 1</div></div>
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 2</div></div>
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 3</div></div>
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 4</div></div>
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 5</div></div>
+
+        <!-- Duplicado para efecto loop -->
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 1</div></div>
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 2</div></div>
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 3</div></div>
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 4</div></div>
+        <div class="logo-item"><div class="client-logo-placeholder">Cliente 5</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section-padding">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold">Equipo</h1>
+            <div class="line"></div>
+            <p>Roles típicos en empresas de servicios (puedes adaptarlos a tu realidad).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="team-card">
+            <div class="team-photo-placeholder">
+              <i class="ri-user-3-line"></i>
+            </div>
+            <div class="team-body">
+              <h5 class="text-center mb-1">Dirección General</h5>
+              <p class="cargo text-center mb-2">Estrategia y relación con clientes clave</p>
+              <p class="mb-0 small">
+                Responsable de la visión del negocio, toma de decisiones estratégicas y relaciones de alto nivel.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="team-card">
+            <div class="team-photo-placeholder">
+              <i class="ri-user-settings-line"></i>
+            </div>
+            <div class="team-body">
+              <h5 class="text-center mb-1">Coordinación de Operaciones</h5>
+              <p class="cargo text-center mb-2">Logística y ejecución</p>
+              <p class="mb-0 small">
+                Encargado de coordinar equipos, recursos y tiempos para que los proyectos se ejecuten según lo
+                planeado.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="team-card">
+            <div class="team-photo-placeholder">
+              <i class="ri-megaphone-line"></i>
+            </div>
+            <div class="team-body">
+              <h5 class="text-center mb-1">Marketing & Comercial</h5>
+              <p class="cargo text-center mb-2">Ventas y comunicación</p>
+              <p class="mb-0 small">
+                Responsable de generación de demanda, campañas, contenido y cierre de nuevas oportunidades.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-padding">
+    <div class="container text-center">
+      <h2 class="fw-semibold mb-3">Contacto</h2>
+      <div class="line"></div>
+      <p class="mb-4">
+        Reemplaza estos datos con la información real de tu empresa o de la marca a la que le presentes esta demo.
+      </p>
+
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a class="btn btn-brand" href="https://wa.me/570000000000" target="_blank" rel="noopener">
+          <i class="ri-whatsapp-fill me-1"></i> WhatsApp
+        </a>
+        <a class="btn btn-outline-dark" href="mailto:info@tuempresa.com">
+          <i class="ri-mail-line me-1"></i> Correo
+        </a>
+        <a class="btn btn-outline-dark" href="#" target="_blank" rel="noopener">
+          <i class="ri-instagram-fill me-1"></i> Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-5">
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="logoFooter-placeholder mb-2">
+              <span class="fw-bold">TU MARCA AQUÍ</span>
+            </div>
+            <div class="line"></div>
+            <p class="mt-2 small text-white">Texto corto de presentación o claim final.</p>
+
+            <div class="social-icons">
+              <a href="#"><i class="ri-whatsapp-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+              <a href="mailto:info@tuempresa.com"><i class="ri-mail-line"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-white">SECCIONES</h5>
+            <div class="line"></div>
+            <ul>
+              <li><a href="#about">Nosotros</a></li>
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#clientes">Proyectos</a></li>
+              <li><a href="#team">Equipo</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-white">SEDE</h5>
+            <div class="line"></div>
+            <ul>
+              <li><span>Dirección física de la empresa</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-white">CONTACTO</h5>
+            <div class="line"></div>
+            <ul>
+              <li><a href="tel:+570000000000">+57 000 000 0000</a></li>
+              <li><a href="mailto:info@tuempresa.com">info@tuempresa.com</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row g-3 align-items-center justify-content-between">
+          <div class="col-auto">
+            <a class="dev-badge" href="https://marcapro.agency/" target="_blank" rel="noopener">
+              <span class="dev-dot"></span>
+              <span class="dev-text">Desarrollado por <strong>MarcaPro</strong></span>
+              <i class="ri-external-link-line dev-ext"></i>
+            </a>
+          </div>
+          <div class="col-auto">
+            <p class="mb-0">© 2025 Nombre de la empresa. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN WHATSAPP -->
+  <div class="whatsapp-button">
+    <a class="linkChat" href="https://wa.me/570000000000" target="_blank" rel="noopener">
+      <i class="ri-whatsapp-fill"></i>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <!-- Si ya tienes main.js para otras cosas, lo puedes mantener -->
+  <!-- <script src="./assets/js/main.js"></script> -->
+
+  <!-- Script de dark mode con persistencia -->
+  <script>
+    (function () {
+      const STORAGE_KEY = 'site-theme';
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        document.documentElement.classList.toggle('dark-theme', isDark);
+        document.body.classList.toggle('dark-theme', isDark);
+      }
+
+      function getSavedTheme() {
+        try {
+          return localStorage.getItem(STORAGE_KEY) || 'light';
+        } catch (e) {
+          return 'light';
+        }
+      }
+
+      function saveTheme(theme) {
+        try {
+          localStorage.setItem(STORAGE_KEY, theme);
+        } catch (e) { }
+      }
+
+      function initThemeToggle() {
+        // Aplica el tema guardado al cargar la página
+        const initialTheme = getSavedTheme();
+        applyTheme(initialTheme);
+
+        const buttons = document.querySelectorAll('.btn-theme-toggle');
+        if (!buttons.length) return;
+
+        buttons.forEach((btn) => {
+          btn.addEventListener('click', function () {
+            const isCurrentlyDark = document.documentElement.classList.contains('dark-theme');
+            const newTheme = isCurrentlyDark ? 'light' : 'dark';
+            applyTheme(newTheme);
+            saveTheme(newTheme);
+          });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initThemeToggle);
+      } else {
+        initThemeToggle();
+      }
+    })();
+  </script>
 
 </body>
-
 </html>
